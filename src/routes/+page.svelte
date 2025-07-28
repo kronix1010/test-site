@@ -10,17 +10,19 @@
   }
 </script>
 
-{#if showLogin}
-  <LoginScreen on:animationEnd={handleAnimationEnd} />
-{:else}
-  <div
-    transition:fade={{ duration: 500, delay: 250 }}
-    class="min-h-screen bg-[url('/images/kali-legacy.png')] bg-cover bg-center"
-  >
-    <div class="flex flex-col items-start gap-4 p-4 md:gap-5 md:p-10">
-      <Folder label="Home" href="/" />
-      <Folder label="Projects" href="/projects" />
-      <Folder label="About" href="/about" />
+<div class="bg-black">
+  {#if showLogin}
+    <LoginScreen on:animationEnd={handleAnimationEnd} />
+  {:else}
+    <div
+      transition:fade={{ duration: 500, delay: 250 }}
+      class="min-h-screen bg-[url('/images/kali-legacy.png')] bg-cover bg-center"
+    >
+      <div class="flex flex-col items-start gap-4 p-4 md:gap-5 md:p-10">
+        <Folder label="Home" href="/" />
+        <Folder label="Projects" href="/projects" />
+        <Folder label="About" href="/about" />
+      </div>
     </div>
-  </div>
-{/if}
+  {/if}
+</div>
