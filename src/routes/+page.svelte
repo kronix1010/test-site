@@ -18,7 +18,7 @@
       transition:fade={{ duration: 500, delay: 250 }}
       class="min-h-screen bg-[url('/images/kali-legacy.png')] bg-cover bg-[position:60%_center] md:bg-center"
     >
-      <div class="flex flex-col items-start gap-4 p-4 md:gap-5 md:p-10">
+      <div class="flex flex-row md:flex-col items-start gap-4 p-4 md:gap-5 md:p-10">
         <Folder label="Home" href="/" />
         <Folder label="Projects" href="/projects" />
         <Folder label="About" href="/about" />
