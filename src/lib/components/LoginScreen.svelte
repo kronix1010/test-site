@@ -23,8 +23,9 @@
 
   onMount(async () => {
     const runAnimation = async () => {
-      await typewriter('Alex Rodriguez', (val) => (username = val), 100);
-      await typewriter('**********', (val) => (password = val), 50);
+      await typewriter('Alex Rodriguez', (val) => (username = val), 150);
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+      await typewriter('**********', (val) => (password = val), 100);
 
       setTimeout(() => {
         dispatch('animationEnd');
